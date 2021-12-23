@@ -1,0 +1,63 @@
+<html> 
+  <body>
+    <div class="showArticles">
+        <div class="sub-showArticles subShowArticles_js">
+          <h1>All articles:</h1>
+          <div class="eachArticle" *ngFor="let article of articles" >
+            <div class="sub-eachArticle" >
+                <div #id> Id : {{article.Id}}</div>
+                <div> Title : {{article.Title}}</div>
+                <div> Subtitle : {{article.Subtitle}}</div>
+                <div> Content : {{article.Content}}</div>
+                <div> CreatedDate : {{article.CreatedDate}}</div>
+                <div> PublishedDate : {{article.PublishedDate}}</div>
+               
+                <div class="box-1">
+                    <div class="btn btn-one" (click)="Edit(article.Id);">
+                      <span>EDIT</span>
+                    </div>
+                </div>
+                <div class="box-1">
+                    <div class="btn btn-one" (click)="Delete(article.Id);">
+                      <span>Delete</span>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+      </div>
+      <form class="filter filter_js">
+        <p>Filter by created date</p>
+        <p>Start Date:</p>
+        <input class="startDate" name = "startDate" type = "date" #startDate> 
+        <p>End Date:</p>
+        <input  class ="endDate" name = "endDate" type = "date" #endDate > 
+        <button class="filterBtn_js" type="submit" (click)="OnSubmit(startDate.value, endDate.value);">apply</button>
+  
+        <div>
+          <h1 class="headerFilteredArticles">Filtered articles:</h1>
+            <div class="eachArticle" *ngFor="let article of filteredArticles">
+                <div class="sub-eachArticle">
+                  <div> Id = {{article.Id}}</div>
+                  <div> Title = {{article.Title}}</div>
+                  <div> Subtitle = {{article.Subtitle}}</div>
+                  <div> Content = {{article.Content}}</div>
+                  <div> CreatedDate = {{article.CreatedDate}}</div>
+                  <div> PublishedDate = {{article.PublishedDate}}</div>
+                    <div class="box-1">
+                      <div class="btn btn-one" (click)="Edit(article.Id);" >
+                        <span>EDIT</span>
+                      </div>
+                    </div>
+                        <div class="box-1">
+                          <div class="btn btn-one" (click)="Delete(article.Id)">
+                            <span>Delete</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </form>
+    </div>
+  </body>
+</html>

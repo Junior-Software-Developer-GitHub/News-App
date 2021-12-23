@@ -1,0 +1,44 @@
+			                
+body{margin-top:20px;}
+.avatar{
+width:200px;
+height:200px;
+}	
+
+.form-group{
+    margin: 10px;
+    position: relative;
+
+}
+.input-content {
+    padding: 10px 0;
+}
+.text-primary {
+    text-align: center;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+   color: rgb(0, 0, 0);
+}
+.inputTitle:invalid{
+    border-color: red;
+}
+.inputSubtitle:invalid{
+    border-color: red;
+}
+.inputContent:invalid{
+    border-color: red;
+}
+.inputCreatedDate:invalid{
+    border-color: red;
+}
+.inputPublishedDate:invalid{
+    border-color: red;
+}
